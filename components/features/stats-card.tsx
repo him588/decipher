@@ -4,6 +4,7 @@ import { useBaseContext } from "../context/base-context";
 import {
   formatAssetsData,
   formatlibalities,
+  formatNumber,
   formatProfit,
   formatRevnue,
 } from "../helper/helper";
@@ -46,7 +47,7 @@ function StatsCard({
     <div
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      className="h-full w-full relative overflow-hidden cursor-pointer rounded-2xl border bg-white p-4 shadow-sm transition hover:shadow-md"
+      className="h-full w-full relative overflow-hidden  rounded-2xl border bg-white p-4 shadow-sm transition hover:shadow-md"
     >
       {/* 🔵 Background blob */}
       <div
@@ -70,7 +71,9 @@ function StatsCard({
           <>
             {/* Value */}
             <h2 className="text-2xl font-semibold text-gray-800">
-              {stats.value}
+              {isNaN(Number(stats.value))
+                ? stats.value
+                : formatNumber(Number(stats.value))}
             </h2>
 
             {/* Change % */}

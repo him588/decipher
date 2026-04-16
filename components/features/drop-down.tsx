@@ -26,7 +26,6 @@ function DropDown({
 
   return (
     <div className="relative ">
-      {/* Trigger */}
       <button
         onClick={() => setIsOpen((prev) => !prev)}
         className="w-full flex items-center justify-between
@@ -43,7 +42,6 @@ function DropDown({
         />
       </button>
 
-      {/* Menu */}
       {isOpen && (
         <div
           className="absolute  z-50 mt-1 

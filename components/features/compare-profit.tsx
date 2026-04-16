@@ -77,7 +77,7 @@ function buildChartData(
     return { data: [], series: [] };
   }
 
-  const years = [latestYear, latestYear - 1, latestYear - 2, latestYear - 3];
+  const years = [latestYear - 3, latestYear - 2, latestYear - 1, latestYear];
   const quarters: Quarter[] = ["Q1", "Q2", "Q3", "Q4"];
 
   const safeSum = (arr: any[]) =>

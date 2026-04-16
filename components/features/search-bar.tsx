@@ -51,10 +51,8 @@ function SearchBar() {
         className="w-full bg-transparent outline-none text-sm text-slate-700 placeholder:text-slate-400"
       />
 
-      {/* Dropdown */}
       {search && (
         <div className="absolute w-full max-h-[200px] overflow-y-auto bg-white border border-slate-200 top-[3rem] left-0 rounded-md shadow-md p-2">
-          {/* Empty State */}
           {searchResult.length === 0 && !loading ? (
             <div className="text-sm text-slate-400 text-center py-4">
               No results found
